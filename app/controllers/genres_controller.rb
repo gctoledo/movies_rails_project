@@ -17,6 +17,10 @@ class GenresController < ApplicationController
     render :new
   end
 
+  def show
+    @genre = Genre.find(params[:id])
+  end
+
   private
 
   def genre_params

@@ -17,3 +17,75 @@
   font-weight: bold;
   font-size: 20px;
 }
+
+.genre-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.genre-header h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.genre-details p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.genre-section {
+  margin-top: 20px;
+}
+
+.genre-section h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.genre-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.genre-section ul li {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.genre-section ul li:before {
+  content: "•";
+  color: #4caf50;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.genre-section ul li:hover {
+  color: #333;
+}
+
+.genre-details strong {
+  color: #333;
+}
+
+.genre-section ul li a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.genre-section ul li a:hover {
+  color: #4caf50;
+}

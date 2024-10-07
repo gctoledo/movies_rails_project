@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag "genres" %>
+  </head>
+
+  <body>
+    <div class="genre-container">
+      <div class="genre-header">
+        <h1><%= @genre.name %></h1>
+      </div>
+      
+      <div class="genre-details">
+        <p><strong>Descrição:</strong> <%= @genre.description %></p>
+
+        <div class="genre-section">
+          <h3>Filmes deste Gênero:</h3>
+          <ul>
+            <% @genre.movies.each do |movie| %>
+              <li><%= link_to movie.name, movie_path(movie) %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
