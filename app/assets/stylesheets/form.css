@@ -16,7 +16,9 @@ form label {
   color: #333;
 }
 
-form input[type="text"] {
+form input[type="text"],
+form input[type="date"],
+form select {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -24,6 +26,17 @@ form input[type="text"] {
   border-radius: 4px;
   font-size: 16px;
   box-sizing: border-box;
+}
+
+form input[type="date"] {
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+form select[multiple] {
+  height: auto;
+  min-height: 150px;
 }
 
 form input[type="submit"] {
@@ -39,4 +52,8 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
   background-color: #45a049;
+}
+
+form div {
+  margin-bottom: 20px;
 }

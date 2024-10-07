@@ -1,0 +1,23 @@
+<%= form_with model: @movie do | f | %>
+  <%= f.label 'Nome' %>
+  <%= f.text_field :name %>
+
+  <%= f.label 'Descrição' %>
+  <%= f.text_field :description %>
+
+  <%= f.label 'URL da imagem' %>
+  <%= f.text_field :image_url %>
+
+  <%= f.label :director_ids, "Diretores" %>
+  <%= f.collection_select :director_ids, Director.all, :id, :name, {}, { multiple: true } %>
+
+  <%= f.label :genre_ids, "Gêneros" %>
+  <%= f.collection_select :genre_ids, Genre.all, :id, :name, {}, { multiple: true } %>
+
+  <%= f.label :release_date, "Data de Lançamento" %>
+  <%= f.date_field :release_date %> <!-- Campo de calendário -->
+
+  <%= f.submit 'Cadastrar' %>
+
+
+<% end %>

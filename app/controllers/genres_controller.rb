@@ -8,12 +8,18 @@ class GenresController < ApplicationController
   end
 
   def create
-    @genre = Genre.new(name: params[:genre][:name], description: params[:genre][:description])
+    @genre = Genre.new(genre_params)
 
     if @genre.save
       return redirect_to genres_path
     end
 
     render :new
+  end
+
+  private
+
+  def genre_params
+    params.require(:genre).permit(:name, :description)
   end
 end
