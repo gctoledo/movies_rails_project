@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag "directors" %>
+  </head>
+
+  <body>
+
+    <main>
+      <div class="container">
+
+        <button class="new-btn">
+          <%= link_to 'Cadastrar diretor', new_director_path %>
+        </button>
+
+        <div class="director-list">
+          <% @directors.each do | director | %>
+            <div class="director">
+              <p class="director-title">
+                <%= link_to director.name, director_path(director.id) %>
+              </p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>
+
+
+
