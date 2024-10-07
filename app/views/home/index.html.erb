@@ -8,14 +8,17 @@
 
     <main>
       <div class="container">
+
+        <button class="new-btn">
+          <%= link_to 'Cadastrar filme', new_movie_path %>
+        </button>
+
         <div class="movie-list">
           <% @movies.each do | movie | %>
             <div class="movie">
               <img src=<%= movie.image_url %> placeholder=<%= movie.name %> />
               <h2 class="movie_title">
-                <a href="movie/<%= movie.id %>">
-                  <%= movie.name %>
-                  </a>
+                <%= link_to movie.name, movie_path(movie.id) %>
               </h2>
               <p class="movie_release"><%= movie.release_date.year %></p>
             </div>
