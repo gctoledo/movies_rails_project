@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag "movies" %>
+  </head>
+
+  <body>
+    <div class="movie-container">
+      <div class="movie-header">
+        <h1><%= @movie.name %></h1>
+      </div>
+      
+      <div class="movie-details">
+        <p><strong>Descrição:</strong> <%= @movie.description %></p>
+        <p><strong>Data de Lançamento:</strong> <%= @movie.release_date.strftime("%d/%m/%Y") %></p>
+
+        <div class="movie-section">
+          <h3>Diretores:</h3>
+          <ul>
+            <% @movie.directors.each do |director| %>
+              <li><%= director.name %></li>
+            <% end %>
+          </ul>
+        </div>
+
+        <div class="movie-section">
+          <h3>Gêneros:</h3>
+          <ul>
+            <% @movie.genres.each do |genre| %>
+              <li><%= genre.name %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
