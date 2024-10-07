@@ -1,0 +1,12 @@
+<%= form_with model: @genre do | f | %>
+  <%= f.label 'Nome' %>
+  <%= f.text_field :name %>
+
+  <%= f.label 'Descrição' %>
+  <%= f.text_field :description %>
+
+
+  <%= f.submit 'Cadastrar' %>
+
+
+<% end %>
