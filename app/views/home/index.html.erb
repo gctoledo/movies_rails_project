@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag "home" %>
+  </head>
+
+  <body>
+
+    <main>
+      <div class="container">
+        <div class="movie-list">
+          <% @movies.each do | movie | %>
+            <div class="movie">
+              <img src=<%= movie.image_url %> placeholder=<%= movie.name %> />
+              <h2 class="movie_title">
+                <a href="movie/<%= movie.id %>">
+                  <%= movie.name %>
+                  </a>
+              </h2>
+              <p class="movie_release"><%= movie.release_date.year %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>
+
+
+
