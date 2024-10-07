@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag "directors" %>
+  </head>
+
+  <body>
+    <div class="director-container">
+      <div class="director-header">
+        <h1><%= @director.name %></h1>
+      </div>
+      
+      <div class="director-details">
+        <p><strong>Descrição:</strong> <%= @director.description %></p>
+
+        <div class="director-section">
+          <h3>Filmes Dirigidos:</h3>
+          <ul>
+            <% @director.movies.each do |movie| %>
+              <li><%= link_to movie.name, movie_path(movie) %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
