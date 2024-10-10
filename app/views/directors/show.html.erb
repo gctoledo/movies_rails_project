@@ -6,6 +6,10 @@
 
   <body>
     <div class="director-container">
+      <button class="new-btn">
+        <%= link_to 'Editar diretor', edit_director_path %>
+      </button>
+
       <div class="director-header">
         <h1><%= @director.name %></h1>
       </div>
