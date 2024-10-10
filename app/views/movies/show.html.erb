@@ -6,10 +6,14 @@
 
   <body>
     <div class="movie-container">
+      <button class="new-btn">
+        <%= link_to 'Editar filme', edit_movie_path %>
+      </button>
+
       <div class="movie-header">
         <h1><%= @movie.name %></h1>
       </div>
-      
+
       <div class="movie-details">
         <p><strong>Descrição:</strong> <%= @movie.description %></p>
         <p><strong>Data de Lançamento:</strong> <%= @movie.release_date.strftime("%d/%m/%Y") %></p>
@@ -35,6 +39,3 @@
     </div>
   </body>
 </html>
-
-
-
