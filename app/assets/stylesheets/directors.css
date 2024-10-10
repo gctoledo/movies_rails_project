@@ -89,3 +89,31 @@
 .director-section ul li a:hover {
   color: #4caf50;
 }
+
+.director-container h1 {
+  text-align: center;
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.director-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.director-item a {
+  font-size: 1.4em;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.director-item:hover {
+  background-color: #45a049;
+  cursor: pointer;
+}

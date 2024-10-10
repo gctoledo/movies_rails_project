@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "genres" %>
   </head>
 
   <body>
@@ -13,20 +13,16 @@
           <%= link_to 'Cadastrar gênero', new_genre_path %>
         </button>
 
-        <div class="genre-list">
-          <% @genres.each do | genre | %>
-            <div class="genre">
-              <p class="genre-title">
-                <%= link_to genre.name, genre_path(genre.id) %>
-              </p>
-            </div>
-          <% end %>
+        <div class="genre-container">
+          <h1>Gêneros Cadastrados</h1>
+
+          <ul class="genre-list">
+            <% @genres.each do |genre| %>
+              <li class="genre-item"><%= link_to genre.name, genre_path(genre[:id]) %></li>
+            <% end %>
+          </ul>
         </div>
-      </div>
-    </main>
+      </main>
 
-  </body>
-</html>
-
-
-
+    </body>
+  </html>
